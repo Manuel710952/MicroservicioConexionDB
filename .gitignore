@@ -1,0 +1,50 @@
+# Directorios generados por Visual Studio
+.vs/
+bin/
+obj/
+
+# Archivos de configuración local
+appsettings.Development.json
+appsettings.Production.json
+launchSettings.json
+
+# Archivos de dependencias y herramientas de compilación
+*.dll
+*.exe
+*.pdb
+*.user
+*.bak
+*.cache
+*.bak
+*.log
+packages/
+.nuget/
+
+# Archivos de compilación
+*.msi
+*.zip
+*.rar
+
+# Archivos de prueba y datos de prueba
+TestResults/
+*.trx
+*.coverage
+*.json
+*.xml
+*.csv
+
+# Archivos temporales y respaldos
+*~
+*.swp
+*.tmp
+*.bak
+*.bak.*
+*.log
+*.pid
+*.suo
+*.user
+*.sln.docstates
+
+# Archivos de salida del IDE
+[Dd]ebug/
+[Rr]elease/
