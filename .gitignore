@@ -1,6 +1,5 @@
 # Directorios generados por Visual Studio
 .vs/
-bin/
 obj/
 
 # Archivos de configuración local
