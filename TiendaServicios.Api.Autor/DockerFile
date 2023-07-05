@@ -1,5 +1,5 @@
 ﻿# Utiliza una imagen base con soporte para .NET Core
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:6.0 AS build
 
 # Establece el directorio de trabajo dentro del contenedor
 WORKDIR /app
@@ -18,7 +18,7 @@ RUN dotnet build --configuration Release --no-restore
 RUN dotnet publish --configuration Release --no-build --output /app/publish
 
 # Configura el contenedor para ejecutar la aplicación
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS final
+FROM mcr.microsoft.com/dotnet/core/aspnet:6.0 AS final
 WORKDIR /app
 COPY --from=build /app/publish .
 
@@ -26,4 +26,4 @@ COPY --from=build /app/publish .
 EXPOSE 5000
 ENV ASPNETCORE_URLS=http://*:5000
 
-ENTRYPOINT ["dotnet", "MicroservicioTest.dll"]
+ENTRYPOINT ["dotnet", "TiendaServicios.Api.Autor.dll"]
